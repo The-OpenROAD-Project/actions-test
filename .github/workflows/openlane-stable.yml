@@ -1,0 +1,35 @@
+name: Test OpenLane action.
+
+on: [push]
+
+jobs:
+
+  ol_stable:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Export stable tag
+        run: echo "OPENLANE_STABLE_TAG=$(curl -L https://raw.githubusercontent.com/${{ github.repository }}/${{ github.ref_name }}/.github/openlane-stable-tag)" >> $GITHUB_ENV
+
+      - name: Checkout OpenLane
+        uses: actions/checkout@v3
+        with:
+          repository: The-OpenROAD-Project/OpenLane
+          ref: "${{ env.OPENLANE_STABLE_TAG }}"
+
+      - name: Checkout design
+        uses: actions/checkout@v3
+        with:
+          path: designs/my_design
+
+      - name: Get PDK cache
+        uses: vvbandeira/actions/cache_pdks@new
+        with:
+          pdk_root: ${{ runner.temp }}/pdks
+          ol_tag: "$OPENLANE_STABLE_TAG"
+
+      - uses: vvbandeira/actions/openlane_run@new
+        with:
+          design_name: my_design
+          pdk_root: ${{ runner.temp }}/pdks
+          ol_tag: "$OPENLANE_STABLE_TAG"

@@ -1,0 +1,36 @@
+name: Test OpenLane action.
+
+on: [push]
+
+jobs:
+
+  or_latest:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Checkout OpenLane
+        uses: actions/checkout@v3
+        with:
+          repository: The-OpenROAD-Project/OpenLane
+
+      - name: Get PDK cache
+        uses: vvbandeira/actions/cache_pdks@new
+        with:
+          pdk_root: ${{ runner.temp }}/pdks
+
+      - name: Update OpenROAD to latest commit
+        uses: vvbandeira/actions/openlane_update_tool@new
+        with:
+          tool_name: openroad_app
+          pdk_root: ${{ runner.temp }}/pdks
+
+      - name: Checkout design
+        uses: actions/checkout@v3
+        with:
+          path: designs/my_design
+
+      - uses: vvbandeira/actions/openlane_run@new
+        with:
+          design_name: my_design
+          pdk_root: ${{ runner.temp }}/pdks
+          ol_tag: current

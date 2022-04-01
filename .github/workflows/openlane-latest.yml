@@ -1,0 +1,42 @@
+name: Test OpenLane action.
+
+on: [push]
+
+jobs:
+
+  ol_latest:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Checkout OpenLane
+        uses: actions/checkout@v3
+        with:
+          repository: The-OpenROAD-Project/OpenLane
+          fetch-depth: 0
+
+      - name: Get latest OpenLane tag
+        run: |
+          export OPENLANE_STABLE_TAG="$(git describe --exact-match --tags $(git rev-list --tags --max-count=1))"
+          echo "OPENLANE_STABLE_TAG=$OPENLANE_STABLE_TAG" >> $GITHUB_ENV
+          git switch -c update-ol $OPENLANE_STABLE_TAG
+
+      - name: Get PDK cache
+        uses: vvbandeira/actions/cache_pdks@new
+        with:
+          pdk_root: ${{ runner.temp }}/pdks
+
+      - name: Checkout design
+        uses: actions/checkout@v3
+        with:
+          path: designs/my_design
+
+      - uses: vvbandeira/actions/openlane_run@new
+        with:
+          design_name: my_design
+          pdk_root: ${{ runner.temp }}/pdks
+
+      - name: Update OpenLane tag and submit PR
+        uses: vvbandeira/actions/openlane_pr_tag@new
+        with:
+          ol_tag: "$OPENLANE_STABLE_TAG"
+          path: designs/my_design
