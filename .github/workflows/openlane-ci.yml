@@ -1,0 +1,31 @@
+name: Example of new action usage.
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+
+  ol_latest:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run OpenLane with latest tag and try to update stable tag.
+        uses: vvbandeira/actions/openlane_run@new
+        with:
+          update_tag: true
+
+  ol_stable:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run OpenLane with stable tag from file.
+        uses: vvbandeira/actions/openlane_run@new
+        with:
+          ol_tag: ol_tag_file
+
+  or_latest:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run OpenLane with latest OpenROAD commit.
+        uses: vvbandeira/actions/openlane_run@new
+        with:
+          tools_list: openroad_app
