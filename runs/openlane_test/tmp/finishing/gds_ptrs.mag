@@ -1,0 +1,6 @@
+<< properties >>
+string FIXED_BBOX 0 0 20517 22661
+string GDS_END 907858
+string GDS_FILE /openlane/designs/my_design/runs/openlane_test/results/finishing/spm.magic.gds
+string GDS_START 115134
+<< end >>

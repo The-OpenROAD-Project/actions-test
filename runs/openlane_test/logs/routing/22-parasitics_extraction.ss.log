@@ -1,0 +1,34 @@
+OpenROAD 944855835623e651e7b9c7c50efcce1fb04b4fee 
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ODB-0222] Reading LEF file: /openlane/designs/my_design/runs/openlane_test/tmp/merged_unpadded.lef
+[INFO ODB-0223]     Created 13 technology layers
+[INFO ODB-0224]     Created 25 technology vias
+[INFO ODB-0225]     Created 441 library cells
+[INFO ODB-0226] Finished LEF file:  /openlane/designs/my_design/runs/openlane_test/tmp/merged_unpadded.lef
+[WARNING ORD-0033] -order_wires is deprecated.
+[INFO ODB-0127] Reading DEF file: /openlane/designs/my_design/runs/openlane_test/results/routing/spm.def
+[INFO ODB-0128] Design: spm
+[INFO ODB-0130]     Created 38 pins.
+[INFO ODB-0131]     Created 1194 components and 5650 component-terminals.
+[INFO ODB-0132]     Created 2 special nets and 4566 connections.
+[INFO ODB-0133]     Created 402 nets and 1084 connections.
+[INFO ODB-0134] Finished DEF file: /openlane/designs/my_design/runs/openlane_test/results/routing/spm.def
+[INFO]: Setting RC values...
+[INFO RCX-0431] Defined process_corner X with ext_model_index 0
+[INFO RCX-0029] Defined extraction corner X
+[INFO RCX-0008] extracting parasitics of spm ...
+Notice 0: Split top of 64 T shapes.
+[INFO RCX-0435] Reading extraction model file /home/runner/work/_temp/pdks/sky130A/libs.tech/openlane/rcx_rules.info ...
+[INFO RCX-0436] RC segment generation spm (max_merge_res 50.0) ...
+[INFO RCX-0040] Final 1086 rc segments
+[INFO RCX-0439] Coupling Cap extraction spm ...
+[INFO RCX-0440] Coupling threshhold is 0.1000 fF, coupling capacitance less than 0.1000 fF will be grounded.
+[INFO RCX-0043] 1783 wires to be extracted
+[INFO RCX-0442] 50% completion -- 904 wires have been extracted
+[INFO RCX-0442] 100% completion -- 1783 wires have been extracted
+[INFO RCX-0045] Extract 402 nets, 1488 rsegs, 1488 caps, 1782 ccs
+[INFO RCX-0015] Finished extracting spm.
+[INFO RCX-0016] Writing SPEF ...
+[INFO RCX-0443] 402 nets finished
+[INFO RCX-0017] Finished writing SPEF ...

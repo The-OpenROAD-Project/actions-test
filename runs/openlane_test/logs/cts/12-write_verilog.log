@@ -1,0 +1,15 @@
+OpenROAD 944855835623e651e7b9c7c50efcce1fb04b4fee 
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ODB-0222] Reading LEF file: /openlane/designs/my_design/runs/openlane_test/tmp/merged_unpadded.lef
+[INFO ODB-0223]     Created 13 technology layers
+[INFO ODB-0224]     Created 25 technology vias
+[INFO ODB-0225]     Created 441 library cells
+[INFO ODB-0226] Finished LEF file:  /openlane/designs/my_design/runs/openlane_test/tmp/merged_unpadded.lef
+[INFO ODB-0127] Reading DEF file: /openlane/designs/my_design/runs/openlane_test/results/cts/spm.def
+[INFO ODB-0128] Design: spm
+[INFO ODB-0130]     Created 38 pins.
+[INFO ODB-0131]     Created 538 components and 3026 component-terminals.
+[INFO ODB-0132]     Created 2 special nets and 1942 connections.
+[INFO ODB-0133]     Created 402 nets and 1084 connections.
+[INFO ODB-0134] Finished DEF file: /openlane/designs/my_design/runs/openlane_test/results/cts/spm.def

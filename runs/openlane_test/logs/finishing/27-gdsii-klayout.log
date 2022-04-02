@@ -1,0 +1,17 @@
+
+Input: /openlane/designs/my_design/runs/openlane_test/results/routing/spm.def
+Output: /openlane/designs/my_design/runs/openlane_test/results/finishing/spm.klayout.gds
+Design: spm
+Technology File: /home/runner/work/_temp/pdks/sky130A/libs.tech/klayout/sky130A.lyt
+GDS File List: ['/home/runner/work/_temp/pdks/sky130A/libs.ref/sky130_fd_sc_hd/gds/sky130_fd_sc_hd.gds']
+LEF File: /openlane/designs/my_design/runs/openlane_test/tmp/merged.lef
+
+[INFO] Clearing cells...
+[INFO] Merging GDS files...
+	/home/runner/work/_temp/pdks/sky130A/libs.ref/sky130_fd_sc_hd/gds/sky130_fd_sc_hd.gds
+[INFO] Copying toplevel cell 'spm'
+WARNING: no fill config file specified
+[INFO] Checking for missing GDS...
+[INFO] All LEF cells have matching GDS cells
+[INFO] Writing out GDS '/openlane/designs/my_design/runs/openlane_test/results/finishing/spm.klayout.gds'
+[INFO] Done.

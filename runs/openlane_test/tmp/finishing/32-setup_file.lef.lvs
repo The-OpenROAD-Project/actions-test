@@ -1,0 +1,1 @@
+lvs {/openlane/designs/my_design/runs/openlane_test/results/finishing/spm.spice spm} {/openlane/designs/my_design/runs/openlane_test/tmp/finishing/29-powered_netlist.v spm} /home/runner/work/_temp/pdks/sky130A/libs.tech/netgen/sky130A_setup.tcl /openlane/designs/my_design/runs/openlane_test/logs/finishing/32-spm.lef.log -json

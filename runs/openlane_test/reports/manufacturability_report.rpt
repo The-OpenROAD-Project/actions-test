@@ -1,0 +1,19 @@
+Design Name: spm
+Run Directory: /openlane/designs/my_design/runs/openlane_test
+----------------------------------------
+
+Magic DRC Summary:
+Source: /openlane/designs/my_design/runs/openlane_test/reports/finishing/drc.rpt
+Total Magic DRC violations is 0
+----------------------------------------
+
+LVS Summary:
+Source: /openlane/designs/my_design/runs/openlane_test/logs/finishing/32-spm.lvs.lef.log
+LVS reports no net, device, pin, or property mismatches.
+Total errors = 0
+----------------------------------------
+
+Antenna Summary:
+Source: /openlane/designs/my_design/runs/openlane_test/reports/finishing/antenna.rpt
+Number of pins violated: 0
+Number of nets violated: 0

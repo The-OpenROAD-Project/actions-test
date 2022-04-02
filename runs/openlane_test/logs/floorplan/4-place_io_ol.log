@@ -1,0 +1,20 @@
+OpenROAD 944855835623e651e7b9c7c50efcce1fb04b4fee 
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ODB-0222] Reading LEF file: /openlane/designs/my_design/runs/openlane_test/tmp/merged.lef
+[INFO ODB-0223]     Created 13 technology layers
+[INFO ODB-0224]     Created 25 technology vias
+[INFO ODB-0225]     Created 441 library cells
+[INFO ODB-0226] Finished LEF file:  /openlane/designs/my_design/runs/openlane_test/tmp/merged.lef
+[INFO ODB-0127] Reading DEF file: /openlane/designs/my_design/runs/openlane_test/tmp/floorplan/3-initial_fp.def
+[INFO ODB-0128] Design: spm
+[INFO ODB-0130]     Created 36 pins.
+[INFO ODB-0131]     Created 317 components and 2252 component-terminals.
+[INFO ODB-0133]     Created 352 nets and 984 connections.
+[INFO ODB-0134] Finished DEF file: /openlane/designs/my_design/runs/openlane_test/tmp/floorplan/3-initial_fp.def
+Top-level design name: spm
+Warning: Some pins weren't matched by the config file
+Those are: ['y']
+Assigning random sides to the above pins
+Block boundaries: 0 0 102585 113305
+Writing /openlane/designs/my_design/runs/openlane_test/tmp/floorplan/4-io.def...
