@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Run OpenLane with latest tag and try to update stable tag.
-        uses: vvbandeira/actions/openlane_run@new
+        uses: The-OpenROAD-Project/actions/openlane_run@main
         with:
           update_tag: true
 
@@ -18,7 +18,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Run OpenLane with stable tag from file.
-        uses: vvbandeira/actions/openlane_run@new
+        uses: The-OpenROAD-Project/actions/openlane_run@main
         with:
           ol_tag: ol_tag_file
 
@@ -26,6 +26,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Run OpenLane with latest OpenROAD commit.
-        uses: vvbandeira/actions/openlane_run@new
+        uses: The-OpenROAD-Project/actions/openlane_run@main
         with:
           tools_list: openroad_app
