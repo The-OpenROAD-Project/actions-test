@@ -1,0 +1,20 @@
+# Runs design every night at 10pm with the latest release of OpenLane and
+# creates a PR to update .github/openlane-stable-tag if all tests passes.
+
+name: OpenLane Latest.
+
+on:
+  push:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 22 * * *'
+
+jobs:
+
+  ol_latest:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run OpenLane with latest tag and try to update stable tag.
+        uses: The-OpenROAD-Project/actions/openlane_run@main
+        with:
+          update_tag: true

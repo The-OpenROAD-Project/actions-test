@@ -1,0 +1,18 @@
+# Runs design with the version of OpenLane stored on
+# .github/openlane-stable-tag
+
+name: OpenLane stable.
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+
+  ol_stable:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run OpenLane with stable tag from file.
+        uses: The-OpenROAD-Project/actions/openlane_run@main
+        with:
+          ol_tag: ol_tag_file

@@ -1,0 +1,20 @@
+# Runs design every night at 10pm with the latest release of OpenLane and
+# latest commit from OpenROAD
+
+name: OpenLane and OpenROAD Latest.
+
+on:
+  push:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 22 * * *'
+
+jobs:
+
+  or_latest:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run OpenLane with latest OpenROAD commit.
+        uses: The-OpenROAD-Project/actions/openlane_run@main
+        with:
+          tools_list: openroad_app
