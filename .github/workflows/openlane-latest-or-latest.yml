@@ -4,7 +4,7 @@
 name: OpenLane and OpenROAD Latest.
 
 on:
-  push:
+  pull_request:
   workflow_dispatch:
   schedule:
     - cron: '0 22 * * *'
